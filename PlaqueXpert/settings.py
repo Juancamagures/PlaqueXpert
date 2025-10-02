@@ -29,17 +29,24 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
-INSTALLED_APPS = [
+BASE_APPS = [
     'django.contrib.admin',
-    "colorfield",
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'Placas'
+    'django.contrib.staticfiles'
 ]
+
+LOCAL_APPS = [
+    'apps.placas'
+]
+
+THIRD_APPS=[
+    'rest_framework'
+]
+
+INSTALLED_APPS = LOCAL_APPS + BASE_APPS + THIRD_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -79,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sistema_placas',
         'USER': 'postgres',
-        'PASSWORD': 'PlaqueXpert',
+        'PASSWORD': 'Empl0yee26+',
         'HOST': 'localhost',
         'PORT': '5432'
     }

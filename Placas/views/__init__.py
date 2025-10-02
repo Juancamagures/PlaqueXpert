@@ -1,1 +1,0 @@
-from .api import registrar_placa
