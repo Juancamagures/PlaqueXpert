@@ -6,6 +6,12 @@ from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError as DRFValidationError
 
 
+"""
+    GET : OBTENER
+    POST: ENVIAR
+    PUT | PATCH : EDITAR
+    DELETE: ELIMINAR
+"""
 class VehiculoViewSet(viewsets.ModelViewSet):
     queryset=Vehiculo.objects.all()
     serializer_class=VehiculoSerializers
